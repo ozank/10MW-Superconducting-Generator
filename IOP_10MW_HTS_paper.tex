@@ -206,7 +206,6 @@ In \cite{} a radial flux claw pole machine is presented. The novelty of the desi
 
 In the machine presented in this paper, the claw pole shape has been modified as shown in Figure~\ref{evolution_claw}. In this design, the rotor consists of a stationary superconducting field winding, two independent armature windings, and claw pole rotor.
 
-
 \begin{figure}[]
   \centering
   \subfloat[Radial claw pole.]{\label{evolution_a}\includegraphics[scale=0.75]{radial_claw_pole}}
@@ -259,9 +258,7 @@ The proposed topology is iron-cored. Thus, the power density of the machine is l
 
 \subsection{Sectioned Cryostat}
 
-Although, the initial design is proposed with a single loop-shaped superconducting field winding, it is difficult to manufacture and install the field winding in MW scale. In the original design, the cryostat is fixed to the inner surface of the field core as shown in \ref{single_cryostat}. It is possible to mount another coil, which conducts current in the opposite direction, on the outer surface of the field core as in \ref{double_cryostat}. It is also possible to divide these cryostats in to two sections as shown in \ref{sectioned_cryostat}. In this way, it will be easier to manufacture and install the cryostat. Furthermore, now there are two independent cryostat, so in case of a failure the other cryostat can still operate until the maintenance. 
-
-
+Although, the initial design is proposed with a single loop-shaped superconducting field winding, it is difficult to manufacture and install the field winding in MW scale. In the original design, the cryostat is fixed to the inner surface of the field core as shown in \ref{single_cryostat}. It is possible to mount another coil on the outer surface of the field core as in \ref{double_cryostat}, which conducts current in the opposite direction. Thus, the direction of the magnetic flux will still be into the page. Then, the cryostat can be divided into two sections as shown in \ref{sectioned_cryostat}. In this sectioned configuration, it is easier to manufacture and install the cryostat. Furthermore, having two independent cryostat, the machine can still operate at half-capacity even one of the cryostats fails. 
 \begin{figure}[]
   \centering
   \subfloat[Single cryostat.]{\label{single_cryostat}\includegraphics[scale=0.7]{single_cryostat}}  \hfill
@@ -271,81 +268,19 @@ Although, the initial design is proposed with a single loop-shaped superconducti
     \label{cryostat_variants}
 \end{figure}
 
-
-%The disadvantage is the total superconducting wire length is slightly increased due to  the intersection areas, which becomes less important at larger diameters. There is no field core where the two cryostats are adjacent, thus the flux density in the claw pole and the armature teeth will be lower, but this effect is ignored in the simulations. It is also possible to divide the armature core into the same number of sections to coincide with the field core. 
-
-%The field core can also be fixed to a T-shaped core as presented in \ref{T_core}. In this configuration the cryostat and the superconducting coil is mounted to the field core as in \ref{T_core_solid}. The main difference in this configuration is two armature windings are now magnetically independent i.e. there are two separate flux loops in the machine. The flux lines cross the air-gap four times, thus the MMF requirements are reduced. However, the flux has to travel in the field core in a three-dimensional way, which requires SMC to be used. Furthermore, there are radial magnetic attraction forces acting on the large claw pole. Therefore, this configuration is not very suitable for large diameter machines, and the configuration presented in \ref{sectioned_cryostat} is used throughout this chapter.
-
-
-
-
 \section{Design of a 10 MW Superconducting Generator}
  
 As presented in the introduction section and in Table~\ref{generators_list}, 10~MW, 10~rpm superconducting generator designs are quite common in the literature, and a 10 MW double-sided claw pole machine design will be presented in this section.
-\subsection{Electromagnetic Modelling}
 
-
-
-\section{Optimization}
-
-
-
-
-\subsection{Optimisation}
-
-A parametrized model of the proposed topology is developed using Cobham-Opera \cite{Opera}. The parametrized model estimates the air gap flux density distribution, which is then used to estimate the power output of the machine.
-
-The genetic algorithm optimization is realized using the genetic optimisation tool for R "rgenoud" \cite{Mebane2011}, which is an open-source tool with comprehensive optimisation methods and options and it can be easily modified to fit into any type of optimisation problem.
-
-
+A parametrized FEA model of the proposed topology is developed, which estimates the air gap flux density and power output. The machine is optimized using the genetic algorithm optimization tool ``rgenoud'' \cite{Mebane2011}. 
+The objective function is defined as the total active material mass, with pre-defined constraints in outer diameter, phase voltage and current density.
 More details can be found on optimization algorithm in \cite{github-repo}
 
+!!optimization output vs generation grafigi modifiye edilip verilebilir.
 
-THe objective function is defined as the total active material mass. The boundaries of the problem is defined as follows:
+The main specifications of the optimum design is presented in \ref{10MW_spec} and the outline is shown in \ref{10MW_drawing}. The machine has an outer diameter of 6.6 m and an axial length of 1.4 m, which is a similar size to a 5 MW direct-drive permanent magnet generator. The machine has an electrical frequency of 7.33 Hz. There are 11 coils in series and two parallel branches for each phase.
 
-degistir
-
-\begin{itemize}
-  \item  Outer Diameter: It is possible to reduce the active material mass by increasing the diameter. However, the outer diameter should be limited due to installation and manufacturing constraints.
-  \item Power Output: The minimum power output required for the specific design.
-  \item Phase Voltage: The minimum and the maximum phase voltage limits for connection to the power electronics and to the grid.
-  \item Current Density: Maximum current density limit ensures that the temperature of the armature coils is within the acceptable range.
-\end{itemize}
-
-
-\section{Optimized 10 MW Design}
-
-In this section, optimization results of a 10 MW, 10 rpm superconducting generator is presented. 
-
-The inner radius limit is defined as 2.3 m. 
-
-optimization output vs generation grafigi modifiye edilip verilebilir.
-
-The main specifications of the optimum design is presented in \ref{10MW_design_parameters}.
-
-dimension tanimlari yapilabilir
-
-\begin{table}
-  \centering
-  \begin{tabular}{ll}
-\hline
-$R_{in}$ & 2288 mm \\
-$N_{pole}$ & 88 \\
-$h_{claw1}$ & 100 mm\\
-$h_{claw}$ & 393 mm\\
-$w_{claw}$ & 351 mm\\
-$w_{core}$ & 393 mm\\
-$w_{gap}$ & 121 mm\\
-$h_{backcore}$ & 100 mm\\
-$h_{w}$ & 172 mm\\
-$k_{core-pole \, ratio}$ & 0.85 \\
-\hline
- \end{tabular}
-  \caption{Best design parameters for the 10 MW, 10 rpm design.}
-  \label{10MW_design_parameters}
-\end{table}
-
-\begin{table}[t]
+\begin{table}[]
   \centering
   \begin{tabular}{ll}
 \hline
@@ -365,44 +300,33 @@ Induced Coil Voltage & 173 V$_{rms}$\\
 Phase Voltage Voltage & 3.3 kV$_{ll}$ \\
 \hline
  \end{tabular}
-  \caption{Main specifications of the 10 MW, 10 rpm design.}
+  \caption{Main specifications of the optimized 10 MW, 10 rpm design.}
   \label{10MW_spec}
 \end{table}
 
-
-\ref{10MW_tooth_Bz} shows the flux density distribution in the stator tooth when the large claw pole and small claw pole are aligned with the middle stator tooth.
-The total magnetic flux in the stator tooth versus rotor position is plotted in \ref{10MW_flux}.
-The maximum flux in the stator tooth is 57.08 mWb when the large claw pole is aligned with the stator tooth. The flux waveform is not exactly symmetrical; the minimum flux is -53.66 mWb, 6 \% lower than the maximum flux value. This is mainly because of the geometrical difference between the large claw pole and the small claw pole and this difference can be minimised by shape optimisation or using different claw pole thickness. The induced voltage in a single coil at no load is plotted in \ref{10MW_voltage}, which has an electrical frequency of 7.33 Hz. There are 11 coils in series and two parallel branches for each phase. The main specifications of the machine are presented in \ref{10MW_spec}.
-
 \begin{figure}[]
-  \centering
-  \begin{subfigure}{.4\columnwidth}
-  \includegraphics[]{Bz_0_deg}
-  \caption{Middle tooth aligned with the large claw pole.}
-  \label{Bz_0_deg}
-  \end{subfigure}
-
-  \begin{subfigure}{.4\columnwidth}
-  \includegraphics[]{Bz_90_deg}
-  \caption{Middle tooth aligned with the small claw pole.}
-  \label{Bz_90_deg}
-  \end{subfigure}
-
-  \caption{Flux density distribution in Z direction (into the page) in the stator teeth at mean coil radius.} 
-  \label{10MW_tooth_Bz}
-\end{figure}
-
-\begin{figure}[t]
   \centering
     \includegraphics[]{10MW_outline_drawing}
   \caption{The outline dimensions of the 10 MW, 10 rpm generator design. Dimensions are in mm.}
   \label{10MW_drawing}
 \end{figure}
 
-The outline of the optimised generator is shown in \ref{10MW_drawing}. The machine has an outer diameter of 6.6 m and an axial length of 1.4 m, which is a similar size to a 5 MW direct-drive permanent magnet generator.
+Figure~\ref{10MW_tooth_Bz} shows the flux density distribution in the stator tooth when the large claw pole and small claw pole are aligned with the middle stator tooth.
+The total magnetic flux in the stator tooth versus rotor position is plotted in Figure~\ref{10MW_flux}.
+The maximum flux in the stator tooth is 57.08 mWb when the large claw pole is aligned with the stator tooth. 
+
+\begin{figure}[]
+  \centering
+  \subfloat[Middle tooth aligned with the large claw pole.]{\label{Bz_0_deg}\includegraphics[]{Bz_0_deg}}
+  \hfill
+  \subfloat[Middle tooth aligned with the small claw pole.]{\label{Bz_90_deg}\includegraphics[]{Bz_90_deg}}
+   \caption{Flux density distribution in Z direction (into the page) in the stator teeth at mean coil radius.} 
+    \label{10MW_tooth_Bz}
+\end{figure}
+
 The active material mass in the rotor is about 24 tonnes. Stators on each side weight around 10 tonnes.
 
-\begin{table}[t]
+\begin{table}[]
   \centering
   \begin{tabular}{lr}
 \hline
