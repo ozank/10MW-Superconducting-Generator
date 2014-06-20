@@ -67,7 +67,9 @@ EH93JL, UK}
 \ead{o.keysan@ed.ac.uk}
 
 \begin{abstract}
-For offshore wind energy, there is a trend  towards larger wind turbines. The increased power take-off system mass increases the installation cost of the turbine. Direct-drive superconducting generators have the potential to reduce the installation cost of wind turbines. For a successful entry to offshore wind energy market, a HTS generator should be as reliable as conventional generators. It is proposed that a stationary superconducting dc-field winding may increase the reliability of the generator. An axial-flux homopolar generator topology is proposed to be used in low-speed high-torque applications. The topology is modified by using two superconducting field windings to obtain a bipolar flux density distribution for higher power density. Different core types and dimensions were examined to find the most suitable design and a conceptual design of 6 MW, 12 rpm generator is presented.
+For offshore wind energy, there is a trend  towards larger wind turbines. Larger wind turbines mean The increased tower head mass and therefore increased installation cost. Superconducting generators have the potential to reduce the tower head mass for large offshore wind turbines. However,  a HTS generator should be as reliable as conventional generators for a successful entry to the market. In this study, machine design with a stationary superconducting dc-field winding is proposed which increases the reliability. A 10 MW 10 rpm 
+
+devami yazilacak 
 
 S4E
 Superconducting wind turbine generators are proposed to reduce the tower-head mass for
@@ -116,44 +118,26 @@ diameter of the machine is 6.5 m and weighs 184 tonnes including the structural 
 
 \section{Introduction}
 
+The average size of the offsore wind turbines are continuously increasing. It was 2 MW a decade ago, but now increased to 5 MW \cite{bvg}. The installation and maintenance cost of large offshore wind turbines are cheaper per MW compared to smaller wind turbines, and it takes less time to build a wind farm with larger turbines, which all help to reduce the cost of energy \cite{Bang2008}. It is aimed to build 10 MW, and even 20 MW, wind turbines \cite{upwind}. However, the tower head mass of larger wind turbines becomes a critical issue, which is estimated as 760 t for a 10 MW turbine \cite{upwind}.
 
-Literatur:
+Direct-drive superconducting machines are proposed to minimize the tower head-mass and increase the energy yield \cite{Lesser2009, Lewis2007, Kalsi2004}. It is stated in \cite{Lewis2007} that a 6 MW HTS direct drive generator may have 50 \% of the mass of a direct drive PM generator and the lower mass of generator may enable transport and installation of the turbine in one piece.
 
-In \cite{Chen2014}, a superconducting generator with stationary superconducting armature and field windings are shown, the machine is similar to a switched reluctance machine.
-
-Cumleler madde madde degisecek
-
-the average offshore wind turbine size is increasing to reduce the cost of energy.
-
-
-There has been a remarkable increase in the installed renewable power capacity around the world for the last decade and this increase is expected to continue for many years \cite{Tong2010}. The onshore wind energy market is now quite mature, but there is a lot of ongoing research into offshore renewable energy devices which will benefit from higher wind speeds and higher capacity factors \cite{Tong2010}.  In offshore wind turbines, there is a trend towards higher power rated turbines to reduce installation and maintenance costs per kWh \cite{Bang2008}. According to market projections of \cite{offshore_wind_report2009}, annual world production of offshore wind turbines will continue to increase. Furthermore, the proportion of  the turbines rated over 5 MW will increase significantly for the next decade as seen from Fig. \ref{world_production}.
-
-Currently, geared asynchronous machines hold a 70\% share of wind turbine generators \cite{Lesser2009}. Lesser \textit{et al.} compared costs of different generator types in \cite{Lesser2009}. They proposed that the aim of the offshore wind turbine industry is to manufacture 10 MW  turbines which cost \$ 2.7 M/MW or less. The current cost of wind turbines is about \$ 2 M/MW for onshore turbines and \$ 3.7 M/MW for offshore wind turbines with a typical rating of 2.5 MW for onshore and 3.6 MW for offshore \cite{Lesser2009}.
-
-The feasible limit for an industrial 3-stage wind turbine gearbox is about 5 MW due to high torque requirements at very low speeds \cite{Lesser2009}. Moreover, gearboxes cause reliability issues in wind turbines. The reliability of wind turbine sub-assemblies have been compared in \cite{Spinato2009} using the data obtained from 6000 onshore wind turbines over 11 years. This study shows that, although the gearbox doesn't have the highest failure rate, the failures related to gearboxes result in the highest down-time periods (average 340 hours per failure). Note that, this data was obtained from onshore turbines; the downtime related to a gearbox failure for offshore turbines will be much higher, adding an extra cost of down-time on top of the maintenance cost. For example, the worst case scenario is a major failure at the beginning of the winter period and with no subsequent access to the turbine until the winter storms are gone \cite{Abrahamsen2010}.
-
-There are some commercial solutions (mostly direct-drive permanent magnet generators) that aim to overcome this problem e.g. Harakosan, Vensys, Enercon. In \cite{Bang2008} different topologies for wind turbines have been compared. The highest power rated  commercial direct drive machine is the 4.5 MW, 13 rpm Enercon-E112 generator which has a 12 m diameter and 220 tonnes mass. The optimum weight for a 10 MW direct drive PM generator is greater than 300 metric tons including support structures with an air gap diameter greater than 10 meters \cite{Bang2008}. The installation cost of the turbine is directly related to the mass of the generator and nacelle. Moreover, the tower, the foundation and all other supporting structures have to be modified to carry the added mass of the generator. Considering the capability of current offshore installation vessels which is around 300 tonnes \cite{Lewis2007}, the demand for a high power density, low-speed direct-drive generator topology is clear.
-
-One promising candidate to reduce the overall mass and volume of a large offshore wind turbine(up to 10 MW) power take-off system is High-Temperature Superconducting Generators (HTSG) \cite{Lesser2009, Lewis2007, Kalsi2004}. HTS machines can be scaled as fifth power of dimension in \cite{Kalsi2004} compared to third power for a conventional machine, which will become more dominant at direct-drive machines. It is stated in \cite{Lewis2007} that a 6 MW HTS direct drive generator may have 50 \% of the mass of a direct drive PM generator and the lower mass of generator may enable transport and installation of the turbine in one piece.
-
-
-Data from direct-drive systems have been collected to compare mass to torque ratio of HTS machines with other type of generators. The result is presented in a bubble chart in Fig. \ref{generators_mass_comparison} and tabulated in Table \ref{generators_list}.  Note that, some of the machines are final designs or commercial products (e.g., Enercon, Harakosan), where some designs are provisional or it is not clear how the structural mass is estimated. Final designs tend to be heavier than initial designs, but it is believed that the graph will provide a good understanding of torque density capability of HTS machines.  The dashed line represents ratio of generator mass to torque for permanent-magnet machines which is estimated as 25 kg/kNm by Bang \textit{et al.} in \cite{Bang2008}. The Enercon-E112, which has a high $m/T$ ratio (66.6 kg/kNm) is the only copper field synchronous generator in the graph. The continuous line represents the linear trend line estimated using the HTS machines in the graph. The equation of the trend line is given in (\ref{mass_torque_eq}). It can be seen from the graph that HTS machines are generally lighter than PM generators for applications with torque requirements larger than 3000 kNm. There are two PMG topologies below the HTS machine trend line; a transversal flux permanent magnet machine \cite{Bang2009} and the NewGen topology which reduces the structural mass significantly \cite{Engstrom2004}. It should be noted that implementation of similar techniques to HTS machines can further decrease their mass. 
+Data from direct-drive systems have been collected to compare mass to torque ratio of HTS machines with other type of generators and the result is presented in a bubble chart in Fig. \ref{generators_mass_comparison} and tabulated in Table \ref{generators_list}. Although, some designs are just conceptual designs and some are commercial products, the graph provides a good understanding of torque density capability of HTS machines.  The dashed line represents ratio of generator mass to torque for permanent-magnet machines which is estimated as 25 kg/kNm by Bang \textit{et al.} in \cite{Bang2008}. The continuous line represents the linear trend line estimated using the HTS machines in the graph. The equation of the trend line can be represented as:
 
  \begin{equation}
      Mass(t)=0.011\times Torque(kNm)+45
      \label{mass_torque_eq}
  \end{equation}
 
-\begin{figure}[t]
+From the graph, it is clear that HTS machines are lighter than PM generators for applications with torque requirements larger than 3000 kNm.
+
+\begin{figure}[]
 \centering
 \includegraphics[]{generator_mass_compare}
 \caption{Mass of different large direct-drive machines as a function of the torque, area of the square represents the power rating.
  DDPM: Direct drive permanent magnet generator, EESM: Electrically excited synchronous machine, Superconducting: High-temperature superconducting generator. Orange line represents generator mass to torque ratio ($m/T$) of 25 kg/kNm for permanent-magnet machines as given in \cite{Bang2008}. Blue line is the linear trend line for the superconducting machines.}
 \label{generators_mass_comparison}
 \end{figure}
-
- \subsection{Mass Comparison of Direct Drive Generators}
- \label{mass-comparison-section}
 
 \begin{table}[]
 \begin{minipage}{\textwidth}
@@ -196,6 +180,18 @@ Data from direct-drive systems have been collected to compare mass to torque rat
 \end{tabular}
 \end{minipage}
 \end{table}
+
+
+Literatur:
+
+In \cite{Chen2014}, a superconducting generator with stationary superconducting armature and field windings are shown, the machine is similar to a switched reluctance machine.
+
+Cumleler madde madde degisecek
+
+
+The feasible limit for an industrial 3-stage wind turbine gearbox is about 5 MW due to high torque requirements at very low speeds \cite{Lesser2009}. Moreover, gearboxes cause reliability issues in wind turbines. The reliability of wind turbine sub-assemblies have been compared in \cite{Spinato2009} using the data obtained from 6000 onshore wind turbines over 11 years. This study shows that, although the gearbox doesn't have the highest failure rate, the failures related to gearboxes result in the highest down-time periods (average 340 hours per failure). Note that, this data was obtained from onshore turbines; the downtime related to a gearbox failure for offshore turbines will be much higher, adding an extra cost of down-time on top of the maintenance cost. For example, the worst case scenario is a major failure at the beginning of the winter period and with no subsequent access to the turbine until the winter storms are gone \cite{Abrahamsen2010}.
+
+
 
 %Ustu ayni 
 !!asagida tezden aynen alinan cumleler var rewrite
