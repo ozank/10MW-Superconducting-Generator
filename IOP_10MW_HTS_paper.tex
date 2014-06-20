@@ -129,8 +129,6 @@ Data from direct-drive systems have been collected to compare mass to torque rat
      \label{mass_torque_eq}
  \end{equation}
 
-From the graph, it is clear that HTS machines are lighter than PM generators for applications with torque requirements larger than 3000 kNm.
-
 \begin{figure}[]
 \centering
 \includegraphics[]{generator_mass_compare}
@@ -181,6 +179,15 @@ From the graph, it is clear that HTS machines are lighter than PM generators for
 \end{minipage}
 \end{table}
 
+From the graph, it is clear that HTS machines are lighter than PM generators for applications with torque requirements larger than 3000 kNm. Although, superconducting machines are lighter than conventional generators (e.g. geared doubly-fed induction generators or direct-drive permanent magnet generators), low-mass is not the only desired property for offshore wind turbines. Reliability and servicebility is also very important for offshore wind turbines, as any unexpected maintenance is very time consuming and expensive. Furthermore, any down-time related to generator faults add lost energy generation income on top of the repair cost. Therefore, in order to penetrate into the offshore reneawable energy market, the superconducting generators should be as reliable and easy to maintain as the conventional generators. 
+
+Compared to conventional generators superconducting generators have the disadvantage of having extra subsystems such as cryocooler, vacuum system etc. In this paper, a novel superconducting generator topology that is reliable and modular will be presented.
+
+The most common superconducting machine topology is the synchronous superconducting machine, which has a copper armature winding and a rotating DC-excited superconducting field winding.  
+
+!! Refleri ekle
+
+
 
 Literatur:
 
@@ -188,17 +195,11 @@ In \cite{Chen2014}, a superconducting generator with stationary superconducting 
 
 Cumleler madde madde degisecek
 
-
-The feasible limit for an industrial 3-stage wind turbine gearbox is about 5 MW due to high torque requirements at very low speeds \cite{Lesser2009}. Moreover, gearboxes cause reliability issues in wind turbines. The reliability of wind turbine sub-assemblies have been compared in \cite{Spinato2009} using the data obtained from 6000 onshore wind turbines over 11 years. This study shows that, although the gearbox doesn't have the highest failure rate, the failures related to gearboxes result in the highest down-time periods (average 340 hours per failure). Note that, this data was obtained from onshore turbines; the downtime related to a gearbox failure for offshore turbines will be much higher, adding an extra cost of down-time on top of the maintenance cost. For example, the worst case scenario is a major failure at the beginning of the winter period and with no subsequent access to the turbine until the winter storms are gone \cite{Abrahamsen2010}.
-
-
-
-%Ustu ayni 
 !!asagida tezden aynen alinan cumleler var rewrite
 
 \section{Double Sided Claw Pole Concept}
 
-In \cite{} a radial flux claw pole machine is presented. The novelty of the designs lays in having a single stationary superconducting field winding, which simplifies the cooling system. The rotor just consists of modular claw poles, which can be easily dissembled if required. The disadvantage of this machine is the unbalanced magnetic pull, which is proportional to the square of the air-gap magnetic flux density.
+In \cite{} a radial flux claw pole machine is presented. The novelty of the design lays in having a single stationary superconducting field winding, which simplifies the cooling system. The rotor just consists of modular claw poles, which can be easily dissembled if required. The disadvantage of this machine is the unbalanced magnetic pull, which is proportional to the square of the air-gap magnetic flux density.
 
 In the machine presented in this paper, the claw pole shape has been modified as shown in Figure~\ref{evolution_claw}. In this design, the rotor consists of a stationary superconducting field winding, two independent armature windings, and claw pole rotor.
 
@@ -225,7 +226,7 @@ The advantages of the double-sided claw pole topology can be listed as:
   \item The machine uses significantly less superconducting coil due to iron-cored structure and loop-shaped field winding.
 \end{itemize}
 
-The 3D FEA model and the flux density vectors in the machine is presented in Figure~\ref{double_claw_parts}. From the figure it can be seen that the cores are saturated at 2.3 T. The flux density vectors shown in Figure~\ref{double_claw_B_vector_iso} verify the operation of the proposed topology as the magnetic flux created by the superconducting coil links both armature cores through the claw poles as depicted in Figure~\ref{evolution_d}.
+The 3D FEA model and the flux density vectors in the machine is presented in Figure~\ref{double_claw_parts}. From the figure it can be seen that the cores are saturated at 2.3 T. The flux density vectors shown in Figure~\ref{double_claw_B_vector_iso} verify the operation of the proposed topology, as the magnetic flux created by the superconducting coil links both armature cores through the claw poles as depicted in Figure~\ref{evolution_d}.
 
 
 \begin{figure}[]
@@ -244,17 +245,10 @@ The 3D FEA model and the flux density vectors in the machine is presented in Fig
 
 The proposed topology is iron-cored. Thus, the power density of the machine is limited by magnetic saturation , which makes the material selection very critical.  Vacuumschmelze introduced a cobalt-iron alloy called VacoFlux50, which  can be manufactured in laminations and has an impressive magnetic saturation limit with 2.35 T at 16 kA/m \cite{vacoflux}. This material is promising for superconducting machine designs with its high saturation limit.
 
-% B-H characteristics of the VacoFlux50 is presented in \ref{vacoflux-bh}.
-% \begin{figure}[]
-%   \centering
-%     \includegraphics[]{vacoflux_50}
-%   \caption{B-H curve for  VacoFlux50 cobalt-iron alloy\cite{vacoflux}.}
-%   \label{vacoflux-bh}
-% \end{figure}
-
 \subsection{Sectioned Cryostat}
 
-Although, the initial design is proposed with a single loop-shaped superconducting field winding, it is difficult to manufacture and install the field winding in MW scale. In the original design, the cryostat is fixed to the inner surface of the field core as shown in \ref{single_cryostat}. It is possible to mount another coil on the outer surface of the field core as in \ref{double_cryostat}, which conducts current in the opposite direction. Thus, the direction of the magnetic flux will still be into the page. Then, the cryostat can be divided into two sections as shown in \ref{sectioned_cryostat}. In this sectioned configuration, it is easier to manufacture and install the cryostat. Furthermore, having two independent cryostat, the machine can still operate at half-capacity even one of the cryostats fails. 
+Although, the initial design has a single loop-shaped superconducting field winding, it is difficult to manufacture and install the field winding in MW scale. In the original design, the cryostat is fixed to the inner surface of the field core as shown in \ref{single_cryostat}, however, it is also possible to mount another coil on the outer surface of the field core as in \ref{double_cryostat}. Then, the cryostat can be divided into smaller sections as shown in \ref{sectioned_cryostat}. This configuration has two main advantages. Firstly, it is easier to manufacture and install the sectioned cryostat compared to full span cryostat. Secondly, two independent cryostat introduces modularity to the system, thus even one of the cryostats fails  the machine can still operate at half-capacity until maintenance.
+ 
 \begin{figure}[]
   \centering
   \subfloat[Single cryostat.]{\label{single_cryostat}\includegraphics[scale=0.7]{single_cryostat}}  \hfill
@@ -266,13 +260,12 @@ Although, the initial design is proposed with a single loop-shaped superconducti
 
 \section{Design of a 10 MW Superconducting Generator}
  
-As presented in the introduction section and in Table~\ref{generators_list}, 10~MW, 10~rpm superconducting generator designs are quite common in the literature, and a 10 MW double-sided claw pole machine design will be presented in this section.
+As presented in the introduction section and in Table~\ref{generators_list}, 10~MW, 10~rpm superconducting generator designs are quite common in the literature, therefore a 10 MW double-sided claw pole machine is designed for a better comparison.
 
 A parametrized FEA model of the proposed topology is developed, which estimates the air gap flux density and power output. The machine is optimized using the genetic algorithm optimization tool ``rgenoud'' \cite{Mebane2011}. 
 The objective function is defined as the total active material mass, with pre-defined constraints in outer diameter, phase voltage and current density.
-More details can be found on optimization algorithm in \cite{github-repo}
+More details can be found on optimization algorithm in \cite{github-repo}.
 
-!!optimization output vs generation grafigi modifiye edilip verilebilir.
 
 The main specifications of the optimum design is presented in \ref{10MW_spec} and the outline is shown in \ref{10MW_drawing}. The machine has an outer diameter of 6.6 m and an axial length of 1.4 m, which is a similar size to a 5 MW direct-drive permanent magnet generator. The machine has an electrical frequency of 7.33 Hz. There are 11 coils in series and two parallel branches for each phase.
 
