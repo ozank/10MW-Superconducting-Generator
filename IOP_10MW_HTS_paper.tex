@@ -183,25 +183,32 @@ From the graph, it is clear that HTS machines are lighter than PM generators for
 
 Compared to conventional generators superconducting generators have the disadvantage of having extra subsystems such as cryocooler, vacuum system etc. In this paper, a novel superconducting generator topology that is reliable and modular will be presented.
 
-The most common superconducting machine topology is the synchronous superconducting machine, which has a copper armature winding and a rotating DC-excited superconducting field winding.  
 
 !! Refleri ekle
+Offshore wind turbine applications have challenging requirements. Repair and maintenance in offshore wind turbines are time consuming and expensive. Thus, the superconducting generator should be as reliable as the conventional generator systems. Furthermore, any crtical system should have redundancy to get fail-safe operation. It is desirable to have modularity in the power take-off system to make transportation, installation and maintenance easier.
 
+Although, the most common superconducting machine topology is the synchronous superconducting machine \cite{Gamble2011, Kalsi2004h}, which has a copper armature winding and a rotating DC-excited superconducting field winding, it may not be the most suitable topology for an offshore wind turbine application. The synchronous generator with a superconducting rotor has the following problems and challenges:
 
+\begin{itemize}
 
-Literatur:
+  \item \textbf{Rotating Transfer Coupler:} In a rotating superconducting coil configuration, rotating transfer coupler introduces reliability issues and requires regular maintenance. Furthermore, it is the single poinf of failure for the whole generator system. It is similar for the electric excitation system.
 
-In \cite{Chen2014}, a superconducting generator with stationary superconducting armature and field windings are shown, the machine is similar to a switched reluctance machine.
+  \item \textbf{Torque Transfer Structure:} Machines with rotating field superconducting winding require a torque transfer structure that is thermally insulative and structurally sound, which is difficult to design and expensive to manufacture.
 
-Cumleler madde madde degisecek
+  \item \textbf{Transient forces in the SC coil:} Second generation HTS tapes are prone to high stresses and bending. They are exposed to centrifugal and other transient forces in a rotating superconducting winding design.
+  
+  \item \textbf{SC Tape Usage}: In a conventional synchronous superconducting machine, the magnetic flux has to cross the air-gap, vacuum and insulation layers. Thus, the equivalent magnetic gap is larger than the mechanical gap, which increases the superconducting coil requirement.
+  
+\end{itemize}
 
-!!asagida tezden aynen alinan cumleler var rewrite
+There are novel machine designs in literature aim to overcome some of these problems. AMSC plans to put the cold heads in the rotor for their 10 MW, 10 rpm generator design \cite{amsc_presentation}, but the design still requires cryocouplers. General Electric eliminated cryocouplers using a stationary superconducting coil and a rotating copper armature configuration \cite{Stautner2012}. In \cite{Chen2014}, a superconducting generator with stationary superconducting armature and field windings are shown, the machine is similar to a switched reluctance machine.
+
+%Cumleler madde madde degisecek
+%asagida tezden aynen alinan cumleler var rewrite
 
 \section{Double Sided Claw Pole Concept}
 
-In \cite{} a radial flux claw pole machine is presented. The novelty of the design lays in having a single stationary superconducting field winding, which simplifies the cooling system. The rotor just consists of modular claw poles, which can be easily dissembled if required. The disadvantage of this machine is the unbalanced magnetic pull, which is proportional to the square of the air-gap magnetic flux density.
-
-In the machine presented in this paper, the claw pole shape has been modified as shown in Figure~\ref{evolution_claw}. In this design, the rotor consists of a stationary superconducting field winding, two independent armature windings, and claw pole rotor.
+In \cite{Keysan2011e} a radial flux claw pole machine is presented. The novelty of the design lays in having a single stationary superconducting field winding, which simplifies the cooling system. The rotor just consists of modular claw poles, which can be easily disassembled if required. That radial flux claw pole machine is improved in this paper as shown in Figure~\ref{evolution_claw}. The machine has now two independent armature windings, and claw pole rotor.
 
 \begin{figure}[]
   \centering
@@ -216,17 +223,16 @@ In the machine presented in this paper, the claw pole shape has been modified as
     \label{evolution_claw}
 \end{figure}
 
-
-The advantages of the double-sided claw pole topology can be listed as:
+The advantages of the double-sided claw pole topology compared to other superconducting machine designs can be listed as:
 
 \begin{itemize}
   \item The machine has a stationary superconducting field winding, which means: no cryocoupler, no brushes or brushless exciters, no vibrational or rotational forces acting on the SC coil.
-  \item The magnetic attraction forces on the rotor structure are symmetrical and cancel each other, which means reduced structural loads.
+  \item The magnetic attraction forces on the rotor structure are symmetrical and cancel each other, which means reduced structural mass.
   \item The machine has two armature windings that can be operated independently. Thus, the modularity is increased.
   \item The machine uses significantly less superconducting coil due to iron-cored structure and loop-shaped field winding.
 \end{itemize}
 
-The 3D FEA model and the flux density vectors in the machine is presented in Figure~\ref{double_claw_parts}. From the figure it can be seen that the cores are saturated at 2.3 T. The flux density vectors shown in Figure~\ref{double_claw_B_vector_iso} verify the operation of the proposed topology, as the magnetic flux created by the superconducting coil links both armature cores through the claw poles as depicted in Figure~\ref{evolution_d}.
+The 3D FEA model and the flux density vectors in the machine is presented in Figure~\ref{double_claw_parts}.  The flux density vectors shown in Figure~\ref{double_claw_B_vector_iso} verify the operation of the proposed topology, as the magnetic flux created by the superconducting coil links both armature cores through the claw poles as depicted in Figure~\ref{evolution_d}.
 
 
 \begin{figure}[]
@@ -243,11 +249,11 @@ The 3D FEA model and the flux density vectors in the machine is presented in Fig
 
 \subsection{Material Selection}
 
-The proposed topology is iron-cored. Thus, the power density of the machine is limited by magnetic saturation , which makes the material selection very critical.  Vacuumschmelze introduced a cobalt-iron alloy called VacoFlux50, which  can be manufactured in laminations and has an impressive magnetic saturation limit with 2.35 T at 16 kA/m \cite{vacoflux}. This material is promising for superconducting machine designs with its high saturation limit.
+The proposed design is iron-cored. Thus, the power density of the machine is limited by magnetic saturation, which makes the material selection very critical.  Vacuumschmelze introduced a cobalt-iron alloy called VacoFlux50, which  can be manufactured in laminations and has an impressive magnetic saturation limit with 2.35 T at 16 kA/m \cite{vacoflux}. This material is promising for superconducting machine designs with its high saturation limit.
 
 \subsection{Sectioned Cryostat}
 
-Although, the initial design has a single loop-shaped superconducting field winding, it is difficult to manufacture and install the field winding in MW scale. In the original design, the cryostat is fixed to the inner surface of the field core as shown in \ref{single_cryostat}, however, it is also possible to mount another coil on the outer surface of the field core as in \ref{double_cryostat}. Then, the cryostat can be divided into smaller sections as shown in \ref{sectioned_cryostat}. This configuration has two main advantages. Firstly, it is easier to manufacture and install the sectioned cryostat compared to full span cryostat. Secondly, two independent cryostat introduces modularity to the system, thus even one of the cryostats fails  the machine can still operate at half-capacity until maintenance.
+Although, the initial design has a single loop-shaped superconducting field winding, it is difficult to manufacture and install the field winding in one piece in multi-MW scale. In the original design, the cryostat is fixed to the inner surface of the field core as shown in Figure~\ref{single_cryostat}, however, it is also possible to mount another coil on the outer surface of the field core as in Figure~\ref{double_cryostat}. Then, the cryostat can be divided into smaller sections as shown in Figure~\ref{sectioned_cryostat}. This configuration has two main advantages. Firstly, it is easier to manufacture and install the sectioned cryostat compared to full span cryostat. Secondly, two independent cryostat introduces modularity to the system, thus even one of the cryostats fails  the machine can still operate at half-capacity until maintenance.
  
 \begin{figure}[]
   \centering
@@ -260,11 +266,11 @@ Although, the initial design has a single loop-shaped superconducting field wind
 
 \section{Design of a 10 MW Superconducting Generator}
  
-As presented in the introduction section and in Table~\ref{generators_list}, 10~MW, 10~rpm superconducting generator designs are quite common in the literature, therefore a 10 MW double-sided claw pole machine is designed for a better comparison.
+As presented in the introduction section and in Table~\ref{generators_list}, 10~MW, 10~rpm superconducting generator designs are quite common in the literature, therefore, a 10 MW double-sided claw pole machine is designed for a better comparison with other superconducting machine designs.
 
 A parametrized FEA model of the proposed topology is developed, which estimates the air gap flux density and power output. The machine is optimized using the genetic algorithm optimization tool ``rgenoud'' \cite{Mebane2011}. 
 The objective function is defined as the total active material mass, with pre-defined constraints in outer diameter, phase voltage and current density.
-More details can be found on optimization algorithm in \cite{github-repo}.
+%More details can be found on optimization algorithm in \cite{github-repo}.
 
 
 The main specifications of the optimum design is presented in \ref{10MW_spec} and the outline is shown in \ref{10MW_drawing}. The machine has an outer diameter of 6.6 m and an axial length of 1.4 m, which is a similar size to a 5 MW direct-drive permanent magnet generator. The machine has an electrical frequency of 7.33 Hz. There are 11 coils in series and two parallel branches for each phase.
@@ -300,9 +306,7 @@ Phase Voltage Voltage & 3.3 kV$_{ll}$ \\
   \label{10MW_drawing}
 \end{figure}
 
-Figure~\ref{10MW_tooth_Bz} shows the flux density distribution in the stator tooth when the large claw pole and small claw pole are aligned with the middle stator tooth.
-The total magnetic flux in the stator tooth versus rotor position is plotted in Figure~\ref{10MW_flux}.
-The maximum flux in the stator tooth is 57.08 mWb when the large claw pole is aligned with the stator tooth. 
+Figure~\ref{10MW_tooth_Bz} shows the flux density distribution in the stator tooth when the large claw pole and small claw pole are aligned with the middle stator tooth. Mass estimations of the components are presented in Table~\ref[10_MW_mass_spec}. The active material mass in the rotor is about 24 tonnes. Stators on each side weight around 10 tonnes. 
 
 \begin{figure}[]
   \centering
@@ -313,7 +317,6 @@ The maximum flux in the stator tooth is 57.08 mWb when the large claw pole is al
     \label{10MW_tooth_Bz}
 \end{figure}
 
-The active material mass in the rotor is about 24 tonnes. Stators on each side weight around 10 tonnes.
 
 \begin{table}[]
   \centering
@@ -338,8 +341,10 @@ Total Active Material Mass & 57,9 tonnes \\
   \label{10MW_mass_spec}
 \end{table}
 
-The main losses in the machine are presented in \ref{10MW_efficiency}, which are dominated by the copper loss. 40 kW of air blowers are used for ventilation of armature coils. 
-The electrical frequency of the machine is 7.3 Hz, which reduces the core losses in the machine. Furthermore, the core losses in the claw poles are negligible as the flux density magnitude and direction do not change. The core loss in the field core and stator core is calculated as 6.8 kW by extrapolating the core loss values presented in \cite{vacoflux}. The eddy current loss in the armature winding is neglected due to the low electrical frequency.
+
+\subsection{Estimation of Losses}
+
+Main losses in the machine are presented in \ref{10MW_efficiency}. Copper armature winding dissipates 510 kW of heat loss, which is cooled down by 40 kW of air blowers. Core losses in the machine are quite low due to an electrical frequency of 7.3 Hz.
 
 
 \begin{table}[t]
@@ -352,7 +357,7 @@ Copper Loss & 510 kW \\
 Core Loss & 7 kW \\
 Cryocoolers & 24 kW \\
 Air Blowers (Armature) & 40 kW \\
-Output Power & 9,987 kW \\
+%Output Power & 9,987 kW \\
 \hline
 Efficiency & 94.5 \% \\
 %9987/10571
@@ -362,17 +367,64 @@ Efficiency & 94.5 \% \\
   \label{10MW_efficiency}
 \end{table}
 
-\subsection{Estimation of the Heat Losses}
+It is important to accurately estimate the heat leakage in the cryostats, which can be divided into gas heat conduction through the vacuum, radiation heat from  warm walls of the cryostat, conduction through superconducting coil mechanical support, heat leakage through current leads and eddy current loss. These losses are estimated using a similar methodology presented in \cite{Abrahamsen2012, Simons2013}. The operating temperature is assumed as 30 K.
 
-The 10 MW machine has four independent cryostats for increased modularity and ease of manufacturing. The mean length of the superconducting coil in each winding is 10.4 m. The magneto-motive-force of the superconducting coil is selected by the optimisation algorithm as 32.4 kAt. \ref{10MW_varying_MMF} shows the effect of varying MMF to the maximum stator tooth flux linkage. It can be seen from the figure that, the tooth saturates for MMF values higher than 32.4 kAt, and the choice of the GA is optimum.
+detaylar verilebilir, Surface area ile ilgili olani goster.
 
-
-\begin{figure}[t]
+\begin{table}
   \centering
-    \includegraphics[]{10MW_varying_MMF}
-  \caption{Stator tooth flux linkage variation with field winding MMF.}
-  \label{10MW_varying_MMF}
-\end{figure}
+  \begin{tabular}{lrr}
+& 30 K & 65 K \\
+& MgB2--90 A & YBCO--120 A \\
+\hline
+Gas Conduction (at $10^{-3}$ Pa) & 3.9 W & 3.4 W\\
+Suspension Straps & 54.0 W & 50.0 W\\
+Radiation & 17.5 W & 17.4 W\\
+Current leads & 47.2 W & 48.8 W \\
+Cold-head sleeve & 15.6 W & 15.6 W\\
+Eddy Current & 4.0 W & 4.0 W\\
+Other & 15.0 W & 15.0 W\\
+\hline
+Total loss & 157.2 W & 154.2 W\\
+\hline
+ \end{tabular}
+  \caption{Thermal budget for the 10 MW, 10 rpm design. }
+  \label{10MW_thermal_budget}
+\end{table}
+
+
+
+
+
+
+
+
+\begin{table}
+  \centering
+  \begin{tabular}{ll}
+\hline
+Cold head mass & 16.8 kg \\
+Compressor mass & 176 kg \\
+Flexible line mass & 4.2 kg \\
+Total mass & 197 kg \\
+Input power & 6 kW \\
+\hline
+ \end{tabular}
+  \caption{Specifications of the Cryomech's AL230--CP950 cooling system (60~W @30~K) \cite{Cryomech2007}.}
+  \label{cryocooler_spec}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+There are four independent cryostats for increased modularity and ease of manufacturing. The mean length of the superconducting coil in each winding is 10.4 m. 
 
 \begin{table}[t]
   \centering
@@ -392,7 +444,19 @@ Total SC requirement & 1348 kAt.m \\
 %Width=200mm, hgap=121mm 
 
 
+
 \subsection{Superconducting Coil Requirements}
+
+
+The magneto-motive-force of the superconducting coil is selected by the optimisation algorithm as 32.4 kAt. \ref{10MW_varying_MMF} shows the effect of varying MMF to the maximum stator tooth flux linkage. It can be seen from the figure that, the tooth saturates for MMF values higher than 32.4 kAt, and the choice of the GA is optimum.
+
+
+\begin{figure}[t]
+  \centering
+    \includegraphics[]{10MW_varying_MMF}
+  \caption{Stator tooth flux linkage variation with field winding MMF.}
+  \label{10MW_varying_MMF}
+\end{figure}
 
 Tell about the air-gap difference in normal superconducting machines and the proposed one.
 
@@ -425,56 +489,7 @@ Wire length (total) & 15.0 km & 3.4 km & 13.5 km \\
 \end{table}
 
 
-\subsubsection{Cooling Power}
 
-The main heat leakage elements in the cryostat can be listed as:
-
-\begin{itemize}
-  \item Gas heat conduction through the vacuum.
-  \item Radiation heat from  warm walls of the cryostat.  \item Conduction through superconducting coil mechanical support.
-  \item Heat leakage through current leads.
-  %\item Eddy current loss.
-\end{itemize}
-
-These losses are estimated using a similar methodology presented in \cite{Abrahamsen2012, Simons2013}. As a worst case scenario, the operating temperature is assumed as 30 K.
-
-detaylar verilebilir, Surface area ile ilgili olani goster.
-
-\begin{table}
-  \centering
-  \begin{tabular}{lrr}
-& 30 K & 65 K \\
-& MgB2--90 A & YBCO--120 A \\
-\hline
-Gas Conduction (at $10^{-3}$ Pa) & 3.9 W & 3.4 W\\
-Suspension Straps & 54.0 W & 50.0 W\\
-Radiation & 17.5 W & 17.4 W\\
-Current leads & 47.2 W & 48.8 W \\
-Cold-head sleeve & 15.6 W & 15.6 W\\
-Eddy Current & 4.0 W & 4.0 W\\
-Other & 15.0 W & 15.0 W\\
-\hline
-Total loss & 157.2 W & 154.2 W\\
-\hline
- \end{tabular}
-  \caption{Thermal budget for the 10 MW, 10 rpm design. }
-  \label{10MW_thermal_budget}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{ll}
-\hline
-Cold head mass & 16.8 kg \\
-Compressor mass & 176 kg \\
-Flexible line mass & 4.2 kg \\
-Total mass & 197 kg \\
-Input power & 6 kW \\
-\hline
- \end{tabular}
-  \caption{Specifications of the Cryomech's AL230--CP950 cooling system (60~W @30~K) \cite{Cryomech2007}.}
-  \label{cryocooler_spec}
-\end{table}
 
 To summarize, the proposed topology has the advantage of independent cryostats, which increases the modularity and overall reliability of the system. The total cryostat wall area is smaller compared to the conventional cylindrical cryostats, which helps to reduce the gas conduction and radiation losses. However, the sectioned cryostat results in higher number of current leads and suspension straps which increases the conduction losses. In general, the heat loss is within the reasonable values. For example in \cite{Snitchler2011}, it is stated that 6--10 CTI-1020 cryogenics are used for AMSC's 10 MW superconducting generator, which gives 280--450 W of cooling power.
 In \cite{Stautner2012}, the total cooling requirement for the GE's 10 MW LTS superconducting generator is estimated as 131 W. In \cite{Abrahamsen2012}, 500~W is defined as the upper limit of the cooling power for a 5~MW superconducting generator.
