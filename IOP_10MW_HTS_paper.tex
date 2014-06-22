@@ -44,8 +44,8 @@
 %Uncomment next line if AMS fonts required
 %\usepackage{iopams}  
 
-\usepackage{subcaption}
-\captionsetup{compatibility=false}
+%\usepackage{subcaption}
+%\captionsetup{compatibility=false}
 \usepackage{subfig}
 \usepackage[pdftex]{graphicx}
 \usepackage{epstopdf}
@@ -118,7 +118,7 @@ diameter of the machine is 6.5 m and weighs 184 tonnes including the structural 
 
 \section{Introduction}
 
-The average size of the offsore wind turbines are continuously increasing. It was 2 MW a decade ago, but now increased to 5 MW \cite{bvg}. The installation and maintenance cost of large offshore wind turbines are cheaper per MW compared to smaller wind turbines, and it takes less time to build a wind farm with larger turbines, which all help to reduce the cost of energy \cite{Bang2008}. It is aimed to build 10 MW, and even 20 MW, wind turbines \cite{upwind}. However, the tower head mass of larger wind turbines becomes a critical issue, which is estimated as 760 t for a 10 MW turbine \cite{upwind}.
+The average size of the offshore wind turbines are continuously increasing. It was 2 MW a decade ago, but now increased to 5 MW \cite{bvg}. The installation and maintenance cost of large offshore wind turbines are cheaper per MW compared to smaller wind turbines, and it takes less time to build a wind farm with larger turbines, which all help to reduce the cost of energy \cite{Bang2008}. It is aimed to build 10 MW, and even 20 MW, wind turbines \cite{upwind}. However, the tower head mass of larger wind turbines becomes a critical issue, which is estimated as 760 t for a 10 MW turbine \cite{upwind}.
 
 Direct-drive superconducting machines are proposed to minimize the tower head-mass and increase the energy yield \cite{Lesser2009, Lewis2007, Kalsi2004}. It is stated in \cite{Lewis2007} that a 6 MW HTS direct drive generator may have 50 \% of the mass of a direct drive PM generator and the lower mass of generator may enable transport and installation of the turbine in one piece.
 
@@ -179,21 +179,21 @@ Data from direct-drive systems have been collected to compare mass to torque rat
 \end{minipage}
 \end{table}
 
-From the graph, it is clear that HTS machines are lighter than PM generators for applications with torque requirements larger than 3000 kNm. Although, superconducting machines are lighter than conventional generators (e.g. geared doubly-fed induction generators or direct-drive permanent magnet generators), low-mass is not the only desired property for offshore wind turbines. Reliability and servicebility is also very important for offshore wind turbines, as any unexpected maintenance is very time consuming and expensive. Furthermore, any down-time related to generator faults add lost energy generation income on top of the repair cost. Therefore, in order to penetrate into the offshore reneawable energy market, the superconducting generators should be as reliable and easy to maintain as the conventional generators. 
+From the graph, it is clear that HTS machines are lighter than PM generators for applications with torque requirements larger than 3000 kNm. Although, superconducting machines are lighter than conventional generators (e.g. geared doubly-fed induction generators or direct-drive permanent magnet generators), low-mass is not the only desired property for offshore wind turbines. Reliability and serviceability is also very important for offshore wind turbines, as any unexpected maintenance is very time consuming and expensive. Furthermore, any down-time related to generator faults add lost energy generation income on top of the repair cost. Therefore, in order to penetrate into the offshore renewable energy market, the superconducting generators should be as reliable and easy to maintain as the conventional generators. 
 
 Compared to conventional generators superconducting generators have the disadvantage of having extra subsystems such as cryocooler, vacuum system etc. In this paper, a novel superconducting generator topology that is reliable and modular will be presented.
 
 
 !! Refleri ekle
-Offshore wind turbine applications have challenging requirements. Repair and maintenance in offshore wind turbines are time consuming and expensive. Thus, the superconducting generator should be as reliable as the conventional generator systems. Furthermore, any crtical system should have redundancy to get fail-safe operation. It is desirable to have modularity in the power take-off system to make transportation, installation and maintenance easier.
+Offshore wind turbine applications have challenging requirements. Repair and maintenance in offshore wind turbines are time consuming and expensive. Thus, the superconducting generator should be as reliable as the conventional generator systems. Furthermore, any critical system should have redundancy to get fail-safe operation. It is desirable to have modularity in the power take-off system to make transportation, installation and maintenance easier.
 
 Although, the most common superconducting machine topology is the synchronous superconducting machine \cite{Gamble2011, Kalsi2004h}, which has a copper armature winding and a rotating DC-excited superconducting field winding, it may not be the most suitable topology for an offshore wind turbine application. The synchronous generator with a superconducting rotor has the following problems and challenges:
 
 \begin{itemize}
 
-  \item \textbf{Rotating Transfer Coupler:} In a rotating superconducting coil configuration, rotating transfer coupler introduces reliability issues and requires regular maintenance. Furthermore, it is the single poinf of failure for the whole generator system. It is similar for the electric excitation system.
+  \item \textbf{Rotating Transfer Coupler:} In a rotating superconducting coil configuration, rotating transfer coupler introduces reliability issues and requires regular maintenance. Furthermore, it is the single point of failure for the whole generator system. It is similar for the electric excitation system.
 
-  \item \textbf{Torque Transfer Structure:} Machines with rotating field superconducting winding require a torque transfer structure that is thermally insulative and structurally sound, which is difficult to design and expensive to manufacture.
+  \item \textbf{Torque Transfer Structure:} Machines with rotating field superconducting winding require a torque transfer structure that is thermally insulating and structurally sound, which is difficult to design and expensive to manufacture.
 
   \item \textbf{Transient forces in the SC coil:} Second generation HTS tapes are prone to high stresses and bending. They are exposed to centrifugal and other transient forces in a rotating superconducting winding design.
   
@@ -306,7 +306,7 @@ Phase Voltage Voltage & 3.3 kV$_{ll}$ \\
   \label{10MW_drawing}
 \end{figure}
 
-Figure~\ref{10MW_tooth_Bz} shows the flux density distribution in the stator tooth when the large claw pole and small claw pole are aligned with the middle stator tooth. Mass estimations of the components are presented in Table~\ref[10_MW_mass_spec}. The active material mass in the rotor is about 24 tonnes. Stators on each side weight around 10 tonnes. 
+Figure~\ref{10MW_tooth_Bz} shows the flux density distribution in the stator tooth when the large claw pole and small claw pole are aligned with the middle stator tooth. Mass estimations of the components are presented in Table~\ref{10_MW_mass_spec}. The active material mass in the rotor is about 24 tonnes. Stators on each side weight around 10 tonnes. 
 
 \begin{figure}[]
   \centering
@@ -377,7 +377,7 @@ The heat loss can be calculated as shown in \cite{Ekin206}. The operating pressu
 
 Suspension straps are required to mechanically support the superconducting coil. As there are no electromagnetic torque acting on the superconducting coil, the design of these suspension straps relatively straightforward compared to the torque tubes of other types of superconducting machines. The distance between suspension straps is assumed as 1 m, which gives 10 straps per cryostat. Assuming the straps are made of G10-CR fibreglass, the conduction heat loss can be calculated as 13.5 W per cryostat.
 
-The length of current leads should be carefully assesed as it depends on two factors: resistive losses and heat conduction through ambient. For minimum losses, the resistive and conductive losses should be equal as presented in \cite{Kalsi2011a}. Assuming a current input of 90 A, the heat loss in a single current lead is found as 5.9 W (11.8 W per cryostat).
+The length of current leads should be carefully assessed as it depends on two factors: resistive losses and heat conduction through ambient. For minimum losses, the resistive and conductive losses should be equal as presented in \cite{Kalsi2011a}. Assuming a current input of 90 A, the heat loss in a single current lead is found as 5.9 W (11.8 W per cryostat).
 
 Total heat losses in the cryostats are tabulated in Table \ref{10MW_thermal_budget}. The heat loss at 65 K is also presented, which is estimated as 154.2 W. The total thermal budget of the machine  at 30 K is 157.2 W, slightly larger than the heat loss at 65 K. Adding 25\% safety margin, the machine can be cooled using 4~x~50~W cryocoolers. A suitable cooling system for such a requirement is selected as Cryomech's Gifford-McMahon AL230 cold-head coupled with CP950 compressor, which can supply 60 W of cooling power at 30 K \cite{Cryomech2007}. Total cooling system mass in the generator is calculated as 2,000 kg with an electrical power input of 24 kW.
 
@@ -454,7 +454,7 @@ The required superconducting wire length is calculated for three cases: MgB2 at 
 \hline
  & SC Wire Requirement & Total Mass \\
 \hline
-				& 15 km \ce{MgB2} (30 K) & \\
+				& 15 km MgB2 (30 K) & \\
 Proposed Design	& 3.4 km YBCO (30 K) & 184 t\\
  				& 13.5 km YBCO (65 K) & \\
 \hline
@@ -464,7 +464,7 @@ General Electric \cite{Fair2012} & 720 km NbTi & 143 t \\
 AMSC/Snitchler et. al. \cite{Snitchler2011}  & 36 km YBCO (30K) & 150 t \\
 Sung et. al. \cite{Sung2013} & 586 km YBCO & 147 t \\
 Sung et. al. \cite{Sung2013}& 222 km Bi2223 & 196 t \\
-Terao et. al. \cite{Terao2012} & 270 km HTS + 275 km \ce{MgB2} & - \\
+Terao et. al. \cite{Terao2012} & 270 km HTS + 275 km MgB2 & - \\
 Kim et. al. \cite{Song2012}& 919 km HTS & - \\
 Quddes et. al. \cite{Quddes2011} & 1050--1400 km HTS & - \\
 \hline
@@ -578,7 +578,7 @@ A major advantage of the double-claw pole topology is its modularity; instead of
 
 All these factors are very beneficial for offshore wind turbines, where the maintenance and installation are difficult and expensive.
 
-In order to find the optimum design, a parametrised FEA model was developed and coupled with a genetic algorithm optimisation tool. The tool was used to design a 10~MW, 10~rpm generator for wind turbines and a 36.5~MW, 120~rpm machine as a ship propulsion motor.
+In order to find the optimum design, a parametrized FEA model was developed and coupled with a genetic algorithm optimisation tool. The tool was used to design a 10~MW, 10~rpm generator for wind turbines and a 36.5~MW, 120~rpm machine as a ship propulsion motor.
 
 The 10 MW machine has an outer diameter of 6.6 m and an axial length of 1.4 m. The active material mass of the machine was calculated as 58 tonnes. Including the structure and the cooling system, the total mass is estimated as 184 tonnes. This is 23 \% higher than the trend-line of superconducting machines, but still 40 \% lighter than the similar rated direct-drive permanent magnet generators.
 %10 MW, 300t
