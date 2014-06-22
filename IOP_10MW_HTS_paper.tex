@@ -367,9 +367,22 @@ Efficiency & 94.5 \% \\
   \label{10MW_efficiency}
 \end{table}
 
-It is important to accurately estimate the heat leakage in the cryostats, which can be divided into gas heat conduction through the vacuum, radiation heat from  warm walls of the cryostat, conduction through superconducting coil mechanical support, heat leakage through current leads and eddy current loss. These losses are estimated using a similar methodology presented in \cite{Abrahamsen2012, Simons2013}. The operating temperature is assumed as 30 K.
+It is important to accurately estimate the heat leakage in the cryostats, which can be divided into gas heat conduction through the vacuum, radiation heat from  warm walls of the cryostat, conduction through superconducting coil mechanical support, heat leakage through current leads and eddy current loss. These losses are estimated using the methodology presented in \cite{Abrahamsen2012, Simons2013}. 
 
-detaylar verilebilir, Surface area ile ilgili olani goster.
+%The operating temperature is assumed as 30 K.
+
+The surface area of a single cryostat is 6.1 $m^2$, which gives the total cryostat wall area as 24.4 $m^2$. The cryostat used in the proposed generator is different to a superconducting rotor, where a cylindrical cryostat is used. Assuming a 5 m diameter, surface area of a cylindrical cryostat can be calculated as 55 $m^2$, which is twice the area of the proposed cryostat. Thus, the heat loss through cryostat wall is lower.
+
+The heat loss can be calculated as shown in \cite{Ekin206}. The operating pressure is chosen as 10\textsuperscript{-3} Pa, which can be achieved using standard industrial equipments. The heat loss at this vacuum level is 3.9 W. Radiation loss is calculated as 17.5 W by using 10 mm of MLI insulation, which has 30 layers.
+
+Suspension straps are required to mechanically support the superconducting coil. As there are no electromagnetic torque acting on the superconducting coil, the design of these suspension straps relatively straightforward compared to the torque tubes of other types of superconducting machines. The distance between suspension straps is assumed as 1 m, which gives 10 straps per cryostat. Assuming the straps are made of G10-CR fibreglass, the conduction heat loss can be calculated as 13.5 W per cryostat.
+
+The length of current leads should be carefully assesed as it depends on two factors: resistive losses and heat conduction through ambient. For minimum losses, the resistive and conductive losses should be equal as presented in \cite{Kalsi2011a}. Assuming a current input of 90 A, the heat loss in a single current lead is found as 5.9 W (11.8 W per cryostat).
+
+Total heat losses in the cryostats are tabulated in Table \ref{10MW_thermal_budget}. The heat loss at 65 K is also presented, which is estimated as 154.2 W. The total thermal budget of the machine  at 30 K is 157.2 W, slightly larger than the heat loss at 65 K. Adding 25\% safety margin, the machine can be cooled using 4~x~50~W cryocoolers. A suitable cooling system for such a requirement is selected as Cryomech's Gifford-McMahon AL230 cold-head coupled with CP950 compressor, which can supply 60 W of cooling power at 30 K \cite{Cryomech2007}. Total cooling system mass in the generator is calculated as 2,000 kg with an electrical power input of 24 kW.
+
+To summarize, the proposed topology has the advantage of independent cryostats, which increases the modularity and overall availability of the system. The total cryostat wall area is smaller compared to the conventional cylindrical cryostats, which helps to reduce the gas conduction and radiation losses. However, the sectioned cryostat results in higher number of current leads and suspension straps which increases the conduction losses. In general, the heat loss is within the reasonable values. For example in \cite{Snitchler2011}, it is stated that six to ten CTI-1020 cryogenic coolers are used for AMSC's 10 MW superconducting generator, provides 280--450 W of cooling power.
+In \cite{Stautner2012}, the total cooling requirement for the GE's 10 MW LTS superconducting generator is estimated as 131 W, and in \cite{Abrahamsen2012}, 500~W is defined as the upper limit of the cooling power for a 5~MW superconducting generator.
 
 \begin{table}
   \centering
@@ -394,39 +407,11 @@ Total loss & 157.2 W & 154.2 W\\
 
 
 
+\subsection{Superconducting Coil Requirements}
 
+The magneto-motive-force of the superconducting coil is selected by the optimisation algorithm as 32.4 kAt, which saturates the claw poles up to 2.3 T. Total superconducting coil requirement in four cryostats (4~x~10.4~m) can be calculated as 1348 kAt.m as shown in Table~\ref{10MW_hts_spec}.
 
-
-
-
-\begin{table}
-  \centering
-  \begin{tabular}{ll}
-\hline
-Cold head mass & 16.8 kg \\
-Compressor mass & 176 kg \\
-Flexible line mass & 4.2 kg \\
-Total mass & 197 kg \\
-Input power & 6 kW \\
-\hline
- \end{tabular}
-  \caption{Specifications of the Cryomech's AL230--CP950 cooling system (60~W @30~K) \cite{Cryomech2007}.}
-  \label{cryocooler_spec}
-\end{table}
-
-
-
-
-
-
-
-
-
-
-
-There are four independent cryostats for increased modularity and ease of manufacturing. The mean length of the superconducting coil in each winding is 10.4 m. 
-
-\begin{table}[t]
+\begin{table}[]
   \centering
   \begin{tabular}{ll}
 \hline
@@ -439,34 +424,6 @@ Total SC requirement & 1348 kAt.m \\
   \caption{Superconducting winding specifications for the 10 MW, 10 rpm design.}
   \label{10MW_hts_spec}
 \end{table}
-%Inner gap radius: 2681mm-2802mm
-%Outer gap radius: 3195mm-3316mm
-%Width=200mm, hgap=121mm 
-
-
-
-\subsection{Superconducting Coil Requirements}
-
-
-The magneto-motive-force of the superconducting coil is selected by the optimisation algorithm as 32.4 kAt. \ref{10MW_varying_MMF} shows the effect of varying MMF to the maximum stator tooth flux linkage. It can be seen from the figure that, the tooth saturates for MMF values higher than 32.4 kAt, and the choice of the GA is optimum.
-
-
-\begin{figure}[t]
-  \centering
-    \includegraphics[]{10MW_varying_MMF}
-  \caption{Stator tooth flux linkage variation with field winding MMF.}
-  \label{10MW_varying_MMF}
-\end{figure}
-
-Tell about the air-gap difference in normal superconducting machines and the proposed one.
-
-Including the flux penetrating into the superconducting coil, the critical current of MgB2 is assumed as 110 A, and 90 A is chosen as the safe operating current.
-
-The field winding requires 32.4 kAt, which gives 360 turns. Assuming a fill factor of 0.75 and eight layers, the MgB2 wire can be wound on a 30x40~mm cross-section area. YBCO at the same temperature can conduct six times of its critical current at 77 K, which gives 504 A. 400 A is chosen as the safe operation current, which gives the number of turns as 81. Assuming a fill factor of 0.75 and three layers, the winding can fit in a 15x8 mm cross-section area.
-
-
-The superconducting wire requirements for these three cases are presented in \ref{10MW_hts_wire_spec}. The superconducting wire requirement of the proposed machine is 15 km, which is much lower than for conventional superconducting machines. This is mainly because of the iron-cored structure and having a single superconducting winding instead of having separate superconducting coils for each pole.
-
 
 \begin{table}[t]
   \centering
@@ -478,17 +435,54 @@ Current ($~0.8I_c$) & 90 A & 400 A & 100 A \\
 Number of turns & 360 & 81 & 324 \\
 Wire thickness & 0.67 mm & 0.22 mm & 0.22 mm \\
 Wire width & 3.65 mm & 4.8 mm & 4.8 mm \\
-Space & 30x40 mm & 15x8 mm & 15x32 mm \\
 Wire length(per cryostat) & 3744 m & 842 m & 3370 m \\
 Wire length (total) & 15.0 km & 3.4 km & 13.5 km \\
-%Wire mass & 94 kg & 23 kg & 90 kg \\
 \hline
  \end{tabular}
-  \caption{Superconducting tape requirements for the 10 MW, 10 rpm design.}
+  \caption{Superconducting tape requirements for the 10 MW, 10 rpm design (MMF=32.4 kAt).}
   \label{10MW_hts_wire_spec}
 \end{table}
 
 
+The required superconducting wire length is calculated for three cases: MgB2 at 30 K, YBCO at 30 K, YBCO at 65 K. In critical current calculations magnetic flux penetrating into the superconducting coil is taken into account. The results presented in Table~\ref{10MW_hts_wire_spec} whow the SC wire requirement is substantially less than other superconducting designs. In Table~\ref{SC_length_compare}, SC wire requirements of several 10 MW designs are compared. In particular, air-cored topologies require hundreds of kilometres of superconducting wire. The closest design is the AMSC \cite{Snitchler2011}, which requires 36 km of YBCO at 30 K. However, the proposed design just requires 3.4 km of YBCO at that temperature, which is less than one tenth of the AMSC's design.
+
+\begin{table}[]
+\caption{Comparison of superconducting wire requirements and total mass of 10~MW direct-drive superconducting generators.}
+\label{SC_length_compare}
+\centering
+\begin{tabular}{lcr}
+\hline
+ & SC Wire Requirement & Total Mass \\
+\hline
+				& 15 km \ce{MgB2} (30 K) & \\
+Proposed Design	& 3.4 km YBCO (30 K) & 184 t\\
+ 				& 13.5 km YBCO (65 K) & \\
+\hline
+\hline
+Abrahamsen et. al. \cite{Abrahamsen2010} & 200--300 km YBCO &88 t\\
+General Electric \cite{Fair2012} & 720 km NbTi & 143 t \\
+AMSC/Snitchler et. al. \cite{Snitchler2011}  & 36 km YBCO (30K) & 150 t \\
+Sung et. al. \cite{Sung2013} & 586 km YBCO & 147 t \\
+Sung et. al. \cite{Sung2013}& 222 km Bi2223 & 196 t \\
+Terao et. al. \cite{Terao2012} & 270 km HTS + 275 km \ce{MgB2} & - \\
+Kim et. al. \cite{Song2012}& 919 km HTS & - \\
+Quddes et. al. \cite{Quddes2011} & 1050--1400 km HTS & - \\
+\hline
+\end{tabular}
+\end{table}
+
+The low SC requirement is due to two main reasons. Firstly, the coil is loop shaped, which results in better utilization of the MMF per length of the coil. Secondly, as shown in Figure~\ref{magnetic_mechanical_gap}, the magnetic gap in the claw pole topology equals to the mechanical gap. However, in a typical superconducting machine the flux has to pass through many layers (vacuum, radiation shield, EM shield, etc.) through the cryostat, which results in a much larger magnetic gap and increased MMF requirement.
+
+\begin{figure}[]
+  \centering
+  \subfloat[Synchronous machine with superconducting rotor.]{\label{standard_hts_machine_gap}\includegraphics[scale=0.8]{standard_hts_machine_gap}}
+  \hspace{0.5in}
+  %\hfill
+  \subfloat[Claw pole superconducting machine.
+]{\label{claw_pole_gap}\includegraphics[scale=0.8]{claw_pole_gap}}
+    \caption{Magnetic and mechanical gap comparison for the typical superconducting machine and the claw pole machine.} 
+    \label{magnetic_mechanical_gap}
+\end{figure}
 
 
 To summarize, the proposed topology has the advantage of independent cryostats, which increases the modularity and overall reliability of the system. The total cryostat wall area is smaller compared to the conventional cylindrical cryostats, which helps to reduce the gas conduction and radiation losses. However, the sectioned cryostat results in higher number of current leads and suspension straps which increases the conduction losses. In general, the heat loss is within the reasonable values. For example in \cite{Snitchler2011}, it is stated that 6--10 CTI-1020 cryogenics are used for AMSC's 10 MW superconducting generator, which gives 280--450 W of cooling power.
@@ -520,7 +514,6 @@ Before proceeding into the structural mass estimation, it is useful to mention t
 
 
 In \cite{Zavvos2013}, the structural mass for different types of DDPM generators are optimised. Zavvos used FEA simulations and analytical models to estimate the deflection in the structure due to tangential and normal stresses. An analytical model is presented to estimate the structural mass of machines depending on the diameter, axial length and air-gap flux density. Although, the topology is quite different, the analytical model for transverse flux permanent magnet generators presented in \cite{Zavvos2013} is used to estimate the structural mass of the machine. The number of torque arms for stator and rotor is assumed to be 5, as it is found that it is the optimum value for minimum mass \cite{Zavvos2013}. The mass of the rotor structure and stator structure is presented along with the active material mass in \ref{10MW_total_mass}. Thus, the total mass of the generator is estimated as 184.2~t.
-
 
 \begin{table}
   \centering
