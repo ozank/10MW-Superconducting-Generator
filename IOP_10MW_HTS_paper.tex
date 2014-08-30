@@ -69,7 +69,7 @@ EH93JL, UK}
 \begin{abstract}
 
 Superconducting generators have the potential to reduce the tower head mass for large(\~ 10 MW) offshore wind turbines. However, a HTS generator should be as reliable as conventional generators for a successful entry to the market. Most of the proposed designs use the superconducting synchronous generator concept, which has a higher cost than conventional generators and suffer from reliability issues. In this paper, a novel claw-pole type superconducting machine is presented. The design has a stationary superconducting field winding, which simplifies the design and increases reliability. The machine can be operated in independent modules, thus even one of the sections fails the rest can operate at until next maintenance. Another advantage of the design is very low superconducting wire requirement; a 10 MW 10 rpm design is presented which uses 13 km of MgB2 wire at 30 K. The outer
-diameter of the machine is 6.5 m and weighs 184 tonnes including the structural mass. The design thought to be a good candidate to enter the renewable energy market with its low cost and robust structure.
+diameter of the machine is 6.63 m and weighs 184 tonnes including the structural mass. The design thought to be a good candidate to enter the renewable energy market with its low cost and robust structure.
 
 \end{abstract}
 
@@ -87,8 +87,8 @@ diameter of the machine is 6.5 m and weighs 184 tonnes including the structural 
 
 Average size of offshore wind turbines was 2~MW a decade ago, but now increased to 5~MW \cite{bvg}. The installation and maintenance cost of large offshore wind turbines are cheaper per MW compared to smaller wind turbines, and it takes less time to build a wind farm with larger turbines, which all help to reduce the cost of energy \cite{Bang2008}. It is aimed to build 10 MW, and even 20 MW, wind turbines \cite{upwind}, however, the tower head mass of larger wind turbines, which is estimated as 760 t for a 10 MW turbine, becomes a critical issue \cite{upwind}.
 
-Direct-drive superconducting machines are proposed to minimize the tower head-mass and increase the energy yield \cite{Lesser2009, Lewis2007, Kalsi2004a}. It is stated in \cite{Lewis2007} that a 6 MW HTS direct drive generator may have 50 \% of the mass of a direct drive PM generator and the lower mass of generator may enable transport and installation of the turbine in one piece.
-In order to compare mass to torque ratio of HTS machines with other type of generators, data from direct-drive systems have been collected and the results are presented in a bubble chart in Figure \ref{generators_mass_comparison} and tabulated in Table \ref{generators_list}. Although, some designs are just conceptual designs and some are commercial products, the graph provides a good understanding of torque density capability of HTS machines.  The orange line represents ratio of generator mass to torque for permanent-magnet machines which is estimated as 25 kg/kNm by Bang \textit{et al.} in \cite{Bang2008}. The blue line represents the linear trend line estimated using the HTS machines in the graph. From the graph, it is clear that HTS machines are lighter than PM generators for applications with torque requirements larger than 3000 kNm. The equation of the trend line can be represented as:
+Direct-drive superconducting machines are proposed to minimize the tower head-mass and increase the energy yield \cite{Lesser2009, Lewis2007, Kalsi2004a}. It is stated in \cite{Lewis2007} that a 6 MW HTS direct drive generator may have 50 \% of the mass of a direct drive permanent-magnet generator and the lower mass of generator may enable transport and installation of the turbine in one piece.
+In order to compare mass to torque ratio of HTS machines with other type of generators, data from direct-drive systems have been collected and the results are presented in a bubble chart in Figure \ref{generators_mass_comparison} and tabulated in Table \ref{generators_list}. Although, some designs are just conceptual designs and some are commercial products, the graph provides a good understanding of torque density capability of HTS machines.  The orange line represents ratio of generator mass to torque for permanent-magnet machines which is estimated as 25 kg/kNm by Bang \textit{et al.} in \cite{Bang2008}. The blue line represents the linear trend line estimated using the HTS machines in the graph. From the graph, it is clear that HTS machines are lighter than permanent-magnet generators for applications with torque requirements larger than 3000 kNm. The equation of the trend line can be represented as:
 
  \begin{equation}
      Mass(t)=0.011\times Torque(kNm)+45
@@ -206,7 +206,7 @@ The machine analysed using 3D finite-element software and the flux density vecto
 
 \subsection{Material Selection}
 
-Power density of the machine is limited by magnetic saturation as it is iron-cored, which makes the material selection very critical.  Vacuumschmelze introduced a cobalt-iron alloy called VacoFlux50, which can be manufactured in laminations and has an impressive magnetic saturation limit with 2.35 T at 16 kA/m \cite{vacoflux}. This material is promising for superconducting machine designs with its high saturation limit and used in the calculations in this paper.
+Power density of the machine is limited by magnetic saturation as it is iron-cored, which makes the material selection very critical.  Vacuumschmelze introduced a cobalt-iron alloy called VacoFlux50, which can be manufactured in laminations and has an impressive magnetic saturation limit with 2.35 T at 16 kA/m \cite{vacoflux}. VacoFlux50 has satisfactory mechanical properties with a Young's modulus of 210 kN/mm$^2$ and tensile stress of 350 N/mm$^2$ \cite{vacoflux}.  VacoFlux50 has a few variants, such as VacoDur with improved mechanical strength and VacoFlux17 with lower cost. This material is promising for superconducting machine designs with its high saturation limit and used in the calculations in this paper. 
 
 \subsection{Sectioned Cryostat}
 
@@ -230,7 +230,7 @@ The objective function is defined as the total active material mass, with pre-de
 %More details can be found on optimization algorithm in \cite{github-repo}.
 
 
-The main specifications of the optimum design is presented in Table\ref{10MW_spec} and the outline is shown in Figure \ref{10MW_drawing}. The machine has an outer diameter of 6.6 m and an axial length of 1.4 m, which is a similar size to a 5 MW direct-drive permanent magnet generator. The machine has an electrical frequency of 7.33 Hz. There are 11 coils in series and two parallel branches for each phase.
+The main specifications of the optimum design is presented in Table \ref{10MW_spec} and the outline is shown in Figure \ref{10MW_drawing}. The machine has an outer diameter of 6.6 m and an axial length of 1.4 m, which is a similar size to a 5 MW direct-drive permanent magnet generator. The machine has an electrical frequency of 7.33 Hz. There are 11 coils in series and two parallel branches for each phase.
 
 \begin{table}[]
   \centering
@@ -315,7 +315,8 @@ Total Mass & 184.2 t \\
 
 \subsection{Estimation of Losses}
 
-Main losses in the machine are presented in \ref{10MW_efficiency}. Copper armature winding dissipates 510 kW of heat loss, which is cooled down by 40 kW of air blowers. Core losses in the machine are quite low due to an electrical frequency of 7.3 Hz.
+Main losses in the machine are presented in Table~\ref{10MW_efficiency}. Phase resistances are calculated conductor dimensions and number of turns. Current density in the conductor is assumed as 5 A/mm$^2$. Copper armature winding dissipates 510 kW of heat loss, which is cooled down by 40 kW of air blowers. The core loss in the field core and stator core is calculated
+as 7 kW by extrapolating the core loss values presented in VacoFLux datasheet for 7.3 Hz, which is the electrical frequency in the machine at 10 rpm. Eddy current losses in the armature winding is neglected due to the low electrical frequency. Power requirement for the cryocoolers will be estimated in the next section.
 
 \begin{table}[]
   \centering
@@ -377,7 +378,7 @@ Total loss & 157.2 W & 154.2 W\\
 
 \subsection{Superconducting Coil Requirements}
 
-The magneto-motive-force of the superconducting coil is selected by the optimisation algorithm as 32.4 kAt, which saturates the claw poles up to 2.3 T. Total superconducting coil requirement in four cryostats (4~x~10.4~m) can be calculated as 1348 kAt.m as shown in Table~\ref{10MW_hts_spec}.
+The magneto-motive-force of the superconducting coil is selected by the optimisation algorithm as 32.4 kAt, which saturates the claw poles up to 2.3 T. Total superconducting coil requirement in four cryostats (4~x~10.4~m) can be calculated as 1348 kAt.m as shown in Table~\ref{10MW_hts_spec}. In the calculations, data from AMSC's Amperium YBCO wire \cite{AMSC2012} and MgB2 wires manufactured by Columbus Superconductor \cite{Modica2006} have been used.
 
 \begin{table}[]
   \centering
@@ -411,8 +412,9 @@ Wire length (total) & 15.0 km & 3.4 km & 13.5 km \\
   \label{10MW_hts_wire_spec}
 \end{table}
 
+Three cases are investigated for the superconducting coil: MgB2 at 30 K, YBCO at 30 K, YBCO at 65 K. In critical current calculations, magnetic flux penetrating into the superconducting coil is taken into account. In \cite{Keysan2012a} it is found that, magnitude of the perpendicular penetrating flux is less than 0.03 T and the magnitude of the parallel flux component in the SC coil is around 0.36 T. Critical current at each temperature is reduced in proportion using the material data-sheets for penetrating flux values.
 
-The required superconducting wire length is calculated for three cases: MgB2 at 30 K, YBCO at 30 K, YBCO at 65 K. In critical current calculations magnetic flux penetrating into the superconducting coil is taken into account. The results presented in Table~\ref{10MW_hts_wire_spec} whow the SC wire requirement is substantially less than other superconducting designs. In Table~\ref{SC_length_compare}, SC wire requirements of several 10 MW designs are compared. In particular, air-cored topologies require hundreds of kilometres of superconducting wire. The closest design is the AMSC \cite{Snitchler2011}, which requires 36 km of YBCO at 30 K. However, the proposed design just requires 3.4 km of YBCO at that temperature, which is less than one tenth of the AMSC's design.
+The required superconducting wire lengths are presented in Table~\ref{10MW_hts_wire_spec}. In Table~\ref{SC_length_compare}, SC wire requirements of several 10 MW designs are compared. Table shows the SC wire requirement is substantially less than other superconducting designs. In particular, air-cored topologies require hundreds of kilometres of superconducting wire. The closest design is the AMSC \cite{Snitchler2011}, which requires 36 km of YBCO at 30 K. However, the proposed design just requires 3.4 km of YBCO in total at that temperature, which is less than one tenth of the AMSC's design.
 
 \begin{table}[]
 \caption{Comparison of superconducting wire requirements and total mass of 10~MW direct-drive superconducting generators.}
@@ -422,9 +424,9 @@ The required superconducting wire length is calculated for three cases: MgB2 at 
 \hline
  & SC Wire Requirement & Total Mass \\
 \hline
-				& 15 km MgB2 (30 K) & \\
+		& 15 km MgB2 (30 K) & \\
 Proposed Design	& 3.4 km YBCO (30 K) & 184 t\\
- 				& 13.5 km YBCO (65 K) & \\
+ 		& 13.5 km YBCO (65 K) & \\
 \hline
 \hline
 Abrahamsen et. al. \cite{Abrahamsen2010} & 200--300 km YBCO &88 t\\
