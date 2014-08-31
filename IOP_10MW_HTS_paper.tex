@@ -49,11 +49,13 @@
 \usepackage{subfig}
 \usepackage[pdftex]{graphicx}
 \usepackage{epstopdf}
+
 \graphicspath{{./images/}{./images/other_formats/}}
 \DeclareGraphicsExtensions{.pdf,.png,.eps,.jpg}
 
 %Place footnotes at the bottom of the page
 \usepackage[bottom]{footmisc}
+\usepackage{footnote}
 
 \begin{document}
 
@@ -87,11 +89,13 @@ diameter of the machine is 6.63 m and weighs 184 tonnes including the structural
 
 Average size of offshore wind turbines was 2~MW a decade ago, but now increased to 5~MW \cite{bvg}. The installation and maintenance cost of large offshore wind turbines are cheaper per MW compared to smaller wind turbines, and it takes less time to build a wind farm with larger turbines, which all help to reduce the cost of energy \cite{Bang2008}. It is aimed to build 10 MW, and even 20 MW, wind turbines \cite{upwind}, however, the tower head mass of larger wind turbines, which is estimated as 760 t for a 10 MW turbine, becomes a critical issue \cite{upwind}.
 
-Direct-drive superconducting machines are proposed to minimize the tower head-mass and increase the energy yield \cite{Lesser2009, Lewis2007, Kalsi2004a}. It is stated in \cite{Lewis2007} that a 6 MW HTS direct drive generator may have 50 \% of the mass of a direct drive permanent-magnet generator and the lower mass of generator may enable transport and installation of the turbine in one piece.
-In order to compare mass to torque ratio of HTS machines with other type of generators, data from direct-drive systems have been collected and the results are presented in a bubble chart in Figure \ref{generators_mass_comparison} and tabulated in Table \ref{generators_list}. Although, some designs are just conceptual designs and some are commercial products, the graph provides a good understanding of torque density capability of HTS machines.  The orange line represents ratio of generator mass to torque for permanent-magnet machines which is estimated as 25 kg/kNm by Bang \textit{et al.} in \cite{Bang2008}. The blue line represents the linear trend line estimated using the HTS machines in the graph. From the graph, it is clear that HTS machines are lighter than permanent-magnet generators for applications with torque requirements larger than 3000 kNm. The equation of the trend line can be represented as:
+Direct-drive superconducting machines are proposed to minimize the tower head-mass and increase the energy yield \cite{Lesser2009, Lewis2007, Kalsi2004a}. It is stated in \cite{Lewis2007} that a 6 MW HTS direct drive generator may have 50 \% of the mass of a direct drive permanent-magnet generator and the lower mass of generator may enable transport and installation of the turbine in one piece. Superconducting generators have higher magnetic loading than conventional generators, which increases the power density of the machine. In air-cored superconducting machines (\cite{Lee2008,Sung2013}) the air-gap flux density can go up to several Tesla. In fully superconducting machines (\cite{Masson2011,Kalsi2013,Terao2012}), it is possible to increase the magnetic and electric loading of the machine at the same time. Thus, significant mass savings can be achieved. For example, in \cite{Kalsi2013}, a 10 MW, 10 rpm fully superconducting machine has been presented that just weights 52.5 tonnes including the cooling subsystems. At the moment, the biggest operational direct-drive wind turbine generator is Enercon-E126's synchronous generator, which is a 7.5 MW machine that weights 220 tonnes.
+
+
+In order to have a better comparison between conventional and superconducting generators, data from direct-drive systems have been collected and the results are presented in a bubble chart in Figure \ref{generators_mass_comparison} and tabulated in Table \ref{generators_list}. Although, some designs are just conceptual designs and some are commercial products, the graph provides a good understanding of torque density capability of HTS machines.  The orange line represents ratio of generator mass to torque for permanent-magnet machines which is estimated as 25 kg/kNm by Bang \textit{et al.} in \cite{Bang2008}. The blue line represents the linear trend line estimated using the HTS machines in the graph. From the graph, it is clear that HTS machines are lighter than permanent-magnet generators for applications with torque requirements larger than 3000 kNm. The equation of the trend line can be represented as:
 
  \begin{equation}
-     Mass(t)=0.011\times Torque(kNm)+45
+     Mass(t)=0.0097\times Torque(kNm)+46.5
      \label{mass_torque_eq}
  \end{equation}
 
@@ -118,11 +122,11 @@ In order to compare mass to torque ratio of HTS machines with other type of gene
 3 & NewGen \cite{Engstrom2004} & 4 & 19 & 36.4 & 2010 & 18.1 & PMG  \\
 4 & NREL-AMSC \cite{Maples2010}& 3.1 & 12.5 & 90 & 2368 & 38.0 & PMG\footnote{The machine is not optimised for minimum mass.}  \\ 
 5 & Bang et. al. \cite{Bang2009} & 5 & 12 & 90.8 & 3979 & 22.8 & TFPM  \\
-6 &  & 5 & 12 & 60.5 & 3979 & 15.2 & TFPM\footnote{Ring-shaped TFPM.}  \\
+6 &  & 5 & 12 & 60.5 & 3979 & 15.2 & TFPM \\
 7 & NTNU Reference \cite{Smith2012} & 10 & 13 & 260 & 7346 & 35.4 & PMG \\
-8 & NREL-AMSC \cite{Maples2010} & 6 & 12.3 & 177 & 4658 & 38.0 &  PMG\footnote{The machine is not optimised for minimum mass.} \\
-9 &  & 10 & 11.5 & 315 & 8304 & 37.9 & PMG\footnote{The diameter is limited to 4.3 m.}  \\
-10 & Bang et. al. \cite{Bang2008} & 10 & 10 & 325 & 9549 & 34.0 & PMG \footnote{Estimated mass.}  \\
+8 & NREL-AMSC \cite{Maples2010} & 6 & 12.3 & 177 & 4658 & 38.0 &  PMG \\
+9 &  & 10 & 11.5 & 315 & 8304 & 37.9 & PMG  \\
+10 & Bang et. al. \cite{Bang2008} & 10 & 10 & 325 & 9549 & 34.0 & PMG  \\
 11 & Enercon-E126 & 7.5 & 12 & 220 & 6031 & 36.4 & EESM \\
 12 & Lee et. al. \cite{Lee2008} & 5 & 230 & 44 & 208 & 212.0 & HTSG\footnote{Homopolar superconducting machine.}  \\
 13 &  & 5 & 230 & 18 & 208 & 86.7 &  HTSG\footnote{Air-cored superconducting synchronous machine.} \\
@@ -140,6 +144,8 @@ In order to compare mass to torque ratio of HTS machines with other type of gene
 25 & AML \cite{Masson2011} & 10 & 10 & 70 & 9549 & 7.3 & HTSG \footnote{Fully superconducting generator with MgB2 wires.} \\
 26 & Sung et. al. \cite{Sung2013} & 10 & 10 & 147 & 9549 & 15.4 & HTSG \footnote{With YBCO wire.} \\
 27 & & 10 & 10 & 196 & 9549 & 20.5 & HTSG \footnote{With Bi-2223 wire.} \\
+28 & Kalsi \cite{Kalsi2013} & 10 & 10 & 52.5 & 9549 & 5.5 & HTSG \footnote{Fully superconducting generator with MgB2 wires.} \\
+29 & Suprapower \cite{Sanz2014} & 10 & 8.1 & 200 & 11789 & 17.0 & HTSG \\
 \hline
 \end{tabular}
 \end{minipage}
@@ -316,7 +322,7 @@ Total Mass & 184.2 t \\
 \subsection{Estimation of Losses}
 
 Main losses in the machine are presented in Table~\ref{10MW_efficiency}. Phase resistances are calculated conductor dimensions and number of turns. Current density in the conductor is assumed as 5 A/mm$^2$. Copper armature winding dissipates 510 kW of heat loss, which is cooled down by 40 kW of air blowers. The core loss in the field core and stator core is calculated
-as 7 kW by extrapolating the core loss values presented in VacoFLux datasheet for 7.3 Hz, which is the electrical frequency in the machine at 10 rpm. Eddy current losses in the armature winding is neglected due to the low electrical frequency. Power requirement for the cryocoolers will be estimated in the next section.
+as 7 kW by extrapolating the core loss values presented in VacoFLux datasheet for 7.3 Hz, which is the electrical frequency in the machine at 10 rpm. Eddy current losses in the armature winding is neglected due to the low electrical frequency. Details of the power loss calculations can be found in \cite{Keysan2014c}. Power requirement for the cryocoolers will be estimated in the next section.
 
 \begin{table}[]
   \centering
@@ -338,7 +344,7 @@ Efficiency & 94.5 \% \\
   \label{10MW_efficiency}
 \end{table}
 
-It is important to accurately estimate the heat leakage in the cryostats, which can be divided into gas heat conduction through the vacuum, radiation heat from  warm walls of the cryostat, conduction through superconducting coil mechanical support, heat leakage through current leads and eddy current loss. These losses are estimated using the methodology presented in \cite{Abrahamsen2012, Simons2013}. 
+It is important to accurately estimate the heat leakage in the cryostats, which can be divided into gas heat conduction through the vacuum, radiation heat from  warm walls of the cryostat, conduction through superconducting coil mechanical support, heat leakage through current leads and eddy current loss. These losses are estimated using the methodology presented in \cite{Abrahamsen2012, Simons2013, Ekin206,Zhu2014}. Details of the thermal loss calculations can be found in \cite{Keysan2014c}.
 
 %The operating temperature is assumed as 30 K.
 
@@ -414,7 +420,7 @@ Wire length (total) & 15.0 km & 3.4 km & 13.5 km \\
 
 Three cases are investigated for the superconducting coil: MgB2 at 30 K, YBCO at 30 K, YBCO at 65 K. In critical current calculations, magnetic flux penetrating into the superconducting coil is taken into account. In \cite{Keysan2012a} it is found that, magnitude of the perpendicular penetrating flux is less than 0.03 T and the magnitude of the parallel flux component in the SC coil is around 0.36 T. Critical current at each temperature is reduced in proportion using the material data-sheets for penetrating flux values.
 
-The required superconducting wire lengths are presented in Table~\ref{10MW_hts_wire_spec}. In Table~\ref{SC_length_compare}, SC wire requirements of several 10 MW designs are compared. Table shows the SC wire requirement is substantially less than other superconducting designs. In particular, air-cored topologies require hundreds of kilometres of superconducting wire. The closest design is the AMSC \cite{Snitchler2011}, which requires 36 km of YBCO at 30 K. However, the proposed design just requires 3.4 km of YBCO in total at that temperature, which is less than one tenth of the AMSC's design.
+The required superconducting wire lengths are presented in Table~\ref{10MW_hts_wire_spec}. In Table~\ref{SC_length_compare}, SC wire requirements of several 10 MW designs are compared. Table shows the SC wire requirement is substantially less than other superconducting designs. In particular, air-cored topologies require hundreds of kilometres of superconducting wire. The closest design is the AMSC \cite{Snitchler2011}, which requires 36 km of YBCO at 30 K. However, the proposed design just requires 3.4 km of YBCO in total at that temperature, which is less than one tenth of the AMSC's design. The design presented by Kalsi in \cite{Kalsi2013} is remarkable, which combines minimum usage of superconducting wire with minimum mass. However, these designs still need rotating transfer couplers, which may introduce reliability issues as mentioned in the introduction section.
 
 \begin{table}[]
 \caption{Comparison of superconducting wire requirements and total mass of 10~MW direct-drive superconducting generators.}
@@ -431,6 +437,7 @@ Proposed Design	& 3.4 km YBCO (30 K) & 184 t\\
 \hline
 Abrahamsen et. al. \cite{Abrahamsen2010} & 200--300 km YBCO &88 t\\
 General Electric \cite{Fair2012} & 720 km NbTi & 143 t \\
+Kalsi \cite{Kalsi2013} & 42.6 km MgB2 & 52.5 t \\
 AMSC/Snitchler et. al. \cite{Snitchler2011}  & 36 km YBCO (30K) & 150 t \\
 Sung et. al. \cite{Sung2013} & 586 km YBCO & 147 t \\
 Sung et. al. \cite{Sung2013}& 222 km Bi2223 & 196 t \\
@@ -457,13 +464,14 @@ The low SC requirement is due to two main reasons. Firstly, the coil is loop sha
 
 \section{Conclusion}
 
-This paper presents a novel superconducting machine design by introducing the stationary superconducting field winding concept. The concept simplifies the cryostat design by eliminating the transfer couplers and any rotating parts, which helps to increase the reliability. Furthermore, a sectioned cyryostat concept is also presented. This improves modularity and redundancy to the system, which is critical for offshore wind turbines where the O\&M is difficult and expensive.
+This paper presents a novel superconducting machine design by introducing the stationary superconducting field winding concept. The concept simplifies the cryostat design by eliminating the transfer couplers and any rotating parts, which helps to increase the reliability in an offshore wind application. Furthermore, a sectioned cyryostat concept is also presented. This improves modularity and redundancy to the system, which is critical for offshore wind turbines where the O\&M is difficult and expensive.
 
 Maybe the biggest advantage of the proposed topology is the minimal superconducting wire requirement. The 10 MW design requires 32.4 kAt, which is equal to 15 km of MgB2 at 30 K or 13.5 km of YBCO at 65 K. This is substantially less than other superconducting designs.
 
 It may be argued that the power density of the machine is limited because of the iron-cored structure and it is heavier than its competitors. Although, it is true that the proposed design is 23 \% higher than the trend-line of superconducting machines, it is still 40 \% lighter than the similar rated DDPMGs. 
 
 Thus, it is believed that the proposed claw pole topology is a very suitable design to initiate the superconducting generators for offshore wind turbines. The first prototypes can be used to prove that superconducting generators are as reliable as alternative power take-off systems. It may be the intermediate step between conventional generators and more power dense fully-superconducting generators that will be built in future, when the price of superconducting wires come down.
+
 
 \section*{References}
 

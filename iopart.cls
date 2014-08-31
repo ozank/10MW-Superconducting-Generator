@@ -297,7 +297,10 @@
 \long\def\@makefntext#1{\parindent 1em\noindent 
  \makebox[1em][l]{\footnotesize\rm$\m@th{\fnsymbol{footnote}}$}%
  \footnotesize\rm #1}
-\def\@makefnmark{\hbox{${\fnsymbol{footnote}}\m@th$}}
+
+%%Removed for footnote error in the tables by Ozan Keysan 31/08/2014
+%\def\@makefnmark{\hbox{${\fnsymbol{footnote}}\m@th$}}
+
 \def\@thefnmark{\fnsymbol{footnote}}
 \def\footnote{\@ifnextchar[{\@xfootnote}{\stepcounter{\@mpfn}%
        \begingroup\let\protect\noexpand
