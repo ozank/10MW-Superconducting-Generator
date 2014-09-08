@@ -1,4 +1,4 @@
-10MW-Superconducting-Generator
+Journal Paper for [Superconductivity Science and Technology](http://iopscience.iop.org/0953-2048/)
 ==============================
 
-Design of a 10 MW Superconducting Generator for Offshore Wind Turbines
+A Modular and Cost-Effective Superconducting Generator Design for Offshore Wind Turbines
